@@ -32,3 +32,25 @@ body{
     background-color: #fff;
     border-bottom: 1px solid #e5e9f2;
 }
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content]{
+    display: block;
+}
+
+.tab{
+    cursor: pointer;
+    color: black !important;
+}
+
+.tab.active{
+    background-color: #FFc433 !important;
+    border: none;
+}
+
+.submit-button{
+    background-color: #FFc433 !important;
+}
