@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings Page</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
 <body>
     
@@ -22,26 +22,26 @@
                       <h5 class="card-title mb-0"> Settings</h5>
                   </div>
   
-                  <div class="list-group list-group-flush" role="tablist">
-                      <a class="list-group-item list-group-item-action active" data-tab-content data-toggle="list" href="#account" role="tab">
+                <!-- Main Buttons for Tabs -->
+                  <div class="list-group list-group-flush tabs" role="tablist">
+                      <a class="list-group-item list-group-item-action active tab" data-toggle="list" href="#account" role="tab" data-tab-target="#account">
                         Survey
                       </a>
-                      <div>
-                      <a class="list-group-item list-group-item-action" data-tab-content href="second.html">
+                      
+                      <a class="list-group-item list-group-item-action tab" href="#account-notifications" data-tab-target="#account-notifications">
                         Notifications
                       </a>
-                      </div>
+                      
                   </div>
                   
               </div>
           </div>
   
           <div class="col-md-7 col-xl-8">
+            <!-- Main Div for Both -->
               <div class="tab-content">
-                  <div class="tab-pane fade show active" id="account" role="tabpanel">
-  
 
-  
+                  <div id="account" data-tab-content role="tabpanel" class="active">
                       <div class="card">
                           <div class="card-header">
                               <div class="card-actions float-right">
@@ -105,14 +105,49 @@
                                     </div>
                                       
                                   
-                                  <button type="submit" class="btn btn-primary">Save changes</button>
+                                  <button type="submit" class="btn submit-button">Save changes</button>
                               </form>
   
                           </div>
                       </div>
-                  </div>
-                  
-              </div> 
+                </div> 
+
+                    <!-- Notifs -->
+                    <form>
+
+                    <div id="account-notifications" data-tab-content>
+                        <h6 class="mb-4">Notifications</h6>
+
+                    <hr class="border-light m-0">
+                    <div class="card-body pb-2">
+                        <div class="form-group">
+                        <label class="switcher">
+                          <input type="checkbox" class="switcher-input" >
+                          <span class="switcher-indicator">
+                            <span class="switcher-yes"></span>
+                            <span class="switcher-no"></span>
+                          </span>
+                          <span class="switcher-label">Notify me when I haven't opened the app in 24 hours</span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="switcher">
+                          <input type="checkbox" class="switcher-input" >
+                          <span class="switcher-indicator">
+                            <span class="switcher-yes"></span>
+                            <span class="switcher-no"></span>
+                          </span>
+                          <span class="switcher-label">Notify me when I haven't logged my meals for 24 hours</span>
+                        </label>
+                      </div>
+            
+                    </div>
+                    <hr class="border-light m-0">
+                    <br>
+                    <button type="submit" class="btn submit-button">Save changes</button>
+                </form>
+                    </div>
+                    
           </div>
       </div>
   
