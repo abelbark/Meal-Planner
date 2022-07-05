@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
+    <script>
+        window.isMbscDemo = true;
+    </script>
 
     <title>Weekly meal planner</title>
-
 
     <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
     <script src="js/mobiscroll.javascript.min.js"></script>
@@ -132,7 +134,7 @@
     mobiscroll.setOptions({
         locale: mobiscroll.localeEn,                                       // Specify language like: locale: mobiscroll.localePl or omit setting to use default
         theme: 'ios',                                                      // Specify theme like: theme: 'ios' or omit setting to use default
-        themeVariant: 'light'                                              // More info about themeVariant: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-themeVariant
+        themeVariant: 'light'                                              // More info about themeVariant: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-themeVariant
     });
     
     var calendar;
@@ -156,18 +158,24 @@
         icon: '&#x1f373'
     }, {
         id: 2,
+        name: 'Elevenses',
+        color: '#157d13',
+        kcal: '100 - 200 kcal',
+        icon: '&#x1f34c'
+    }, {
+        id: 3,
         name: 'Lunch',
         color: '#32a6de',
         kcal: '500 - 700 kcal',
         icon: '&#x1f35c'
     }, {
-        id: 3,
+        id: 4,
         name: 'Dinner',
         color: '#e29d1d',
         kcal: '400 - 600 kcal',
         icon: '&#x1f959'
     }, {
-        id: 4,
+        id: 5,
         name: 'Snack',
         color: '#68169c',
         kcal: '100 - 200 kcal',
@@ -183,9 +191,9 @@
     
         // set popup header text and buttons for adding
         popup.setOptions({
-            headerText: '<div>New meal</div><div class="md-meal-type">' +  // More info about headerText: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-headerText
+            headerText: '<div>New meal</div><div class="md-meal-type">' +  // More info about headerText: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-headerText
                 formatDate('DDDD, DD MMMM YYYY', new Date(tempMeal.start)) + '</div>',
-            buttons: [                                                     // More info about buttons: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-buttons
+            buttons: [                                                     // More info about buttons: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-buttons
                 'cancel',
                 {
                     text: 'Add',
@@ -225,9 +233,9 @@
     
         // // set popup header text and buttons for editing
         popup.setOptions({
-            headerText: '<div>New meal</div><div class="md-meal-type">' +  // More info about headerText: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-headerText
+            headerText: '<div>New meal</div><div class="md-meal-type">' +  // More info about headerText: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-headerText
                 formatDate('DDDD, DD MMMM YYYY', new Date(tempMeal.start)) + '</div>',
-            buttons: [                                                     // More info about buttons: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-buttons
+            buttons: [                                                     // More info about buttons: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-buttons
                 'cancel',
                 {
                     text: 'Save',
@@ -265,7 +273,7 @@
     }
     
     calendar = mobiscroll.eventcalendar('#demo-meal-planner', {
-        view: {                                                            // More info about view: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-view
+        view: {                                                            // More info about view: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-view
             timeline: {
                 type: 'week',
                 eventList: true,
@@ -273,24 +281,24 @@
                 endDay: 5
             }
         },
-        resources: types,                                                  // More info about resources: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-resources
-        dragToCreate: false,                                               // More info about dragToCreate: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-dragToCreate
-        dragToResize: false,                                               // More info about dragToResize: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-dragToResize
-        dragToMove: true,                                                  // More info about dragToMove: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-dragToMove
-        clickToCreate: true,                                               // More info about clickToCreate: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-clickToCreate
-        extendDefaultEvent: function (ev) {                                // More info about extendDefaultEvent: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-extendDefaultEvent
+        resources: types,                                                  // More info about resources: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-resources
+        dragToCreate: false,                                               // More info about dragToCreate: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-dragToCreate
+        dragToResize: false,                                               // More info about dragToResize: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-dragToResize
+        dragToMove: true,                                                  // More info about dragToMove: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-dragToMove
+        clickToCreate: true,                                               // More info about clickToCreate: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-clickToCreate
+        extendDefaultEvent: function (ev) {                                // More info about extendDefaultEvent: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-extendDefaultEvent
             return {
                 title: 'New meal'
             };
         },
-        onEventCreated: function (args, inst) {                            // More info about onEventCreated: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#event-onEventCreated
+        onEventCreated: function (args, inst) {                            // More info about onEventCreated: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#event-onEventCreated
             // store temporary event
             tempMeal = args.event;
             setTimeout(function () {
                 addMealPopup();
             }, 100);
         },
-        onEventClick: function (args, inst) {                              // More info about onEventClick: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#event-onEventClick
+        onEventClick: function (args, inst) {                              // More info about onEventClick: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#event-onEventClick
             oldMeal = Object.assign({}, args.event);
             tempMeal = args.event;
     
@@ -298,14 +306,14 @@
                 editMealPopup(args);
             }
         },
-        renderResource: function (resource) {                              // More info about renderResource: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-renderResource
+        renderResource: function (resource) {                              // More info about renderResource: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-renderResource
             return '<div class="md-meal-planner-cont">' +
                 '<div class="md-meal-planner-title" style="color:' + resource.color + '">' +
                 '<span class="md-meal-planner-icon">' + resource.icon + '</span>' + resource.name + '</div>' +
-                // '<div class="md-meal-planner-kcal">' + resource.kcal + '</div>' +
+                '<div class="md-meal-planner-kcal">' + resource.kcal + '</div>' +
                 '</div>';
         },
-        renderScheduleEventContent: function (args) {                      // More info about renderScheduleEventContent: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-renderScheduleEventContent
+        renderScheduleEventContent: function (args) {                      // More info about renderScheduleEventContent: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-renderScheduleEventContent
             var event = args.original;
             return '<div class="md-meal-planner-event">' +
                 '<div class="md-meal-planner-event-title">' + event.title + '</div>' +
@@ -322,18 +330,18 @@
         display: 'bottom',                                                 // Specify display mode like: display: 'bottom' or omit setting to use default
         contentPadding: false,
         fullScreen: true,
-        onClose: function () {                                             // More info about onClose: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#event-onClose
+        onClose: function () {                                             // More info about onClose: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#event-onClose
             if (deleteMeal) {
                 calendar.removeEvent(tempMeal);
             } else if (restoreMeal) {
                 calendar.updateEvent(oldMeal);
             }
         },
-        responsive: {                                                      // More info about responsive: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-responsive
+        responsive: {                                                      // More info about responsive: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-responsive
             medium: {
                 
                 display: 'center',                       // Specify display mode like: display: 'bottom' or omit setting to use default
-                width: 400,                                                // More info about width: https://docs.mobiscroll.com/5-17-0/javascript/eventcalendar#opt-width
+                width: 400,                                                // More info about width: https://docs.mobiscroll.com/5-17-1/javascript/eventcalendar#opt-width
                 fullScreen: false,
                 touchUi: false,
                 showOverlay: false
