@@ -35,13 +35,13 @@
                                 <div class="form-group ">
                                     <label>How much do you weigh? (kg) </label>
                                     <br>
-                                    <input type="number" >
+                                    <input type="number" id="userInput1">
                                 </div>
 
                                 <div class="form-group ">
                                   <label>How tall are you? (cm) </label>
                                   <br>
-                                  <input type="number" >
+                                  <input type="number" id="userInput2" >
                               </div>
 
                               <!-- Losing or Gaining Weight -->
@@ -49,9 +49,9 @@
                                   <div class="form-group">
                                       <label >Are you planning to lose or gain weight?</label>
                                       <br>
-                                      <input id="noDiet" name="diet" type="radio"> Lose
+                                      <input id="userInput3" name="diet" type="radio" value="Lose"> Lose
                                       <br>
-                                      <input id="noDiet" name="diet" type="radio"> Gain
+                                      <input id="userInput3" name="diet" type="radio" value="Gain"> Gain
                                   </div>
 
                                   <!-- Activity Level -->
@@ -59,17 +59,17 @@
                                   <div class="form-group">
                                     <label >How would you describe your activity level?</label>
                                     <br>
-                                    <input name="exercise" type="radio"> Sedentary (little to no exercise)
+                                    <input name="exercise" type="radio" id="userInput4" value="Sedentary (little to no exercise)"> Sedentary (little to no exercise)
                                     <br>
-                                    <input name="exercise" type="radio"> Exercise 1-3 times/week
+                                    <input name="exercise" type="radio" id="userInput4" value="Exercise 1-3 times/week"> Exercise 1-3 times/week
                                     <br>
-                                    <input name="exercise" type="radio"> Exercise 4-5 times/week
+                                    <input name="exercise" type="radio" id="userInput4" value="Exercise 4-5 times/week"> Exercise 4-5 times/week
                                     <br>
-                                    <input name="exercise" type="radio"> Daily exercise or intense exercise 3-4 times/week
+                                    <input name="exercise" type="radio" id="userInput4" value="Daily exercise or intense exercise 3-4 times/week"> Daily exercise or intense exercise 3-4 times/week
                                     <br>
-                                    <input name="exercise" type="radio"> Intense exercise 6-7 times/week
-                                    <br>
-                                    <input name="exercise" type="radio">  Very intense exercise daily
+                                    <input name="exercise" type="radio" id="userInput4" value="Intense exercise 6-7 times/week"> Intense exercise 6-7 times/week
+                                    <br> 
+                                    <input name="exercise" type="radio" id="userInput4" value="Very intense exercise daily">  Very intense exercise daily
                                 </div>
 
                                 <!-- Follow any lifestyles? -->
@@ -78,24 +78,25 @@
                                       <label>Are you following any lifestyles? If so which ones </label>
                                       <fieldset>
                                         <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Vegetarian</input>
+                                            <input type="radio" id="userInput5" name="lifestyle" value="Vegetarian"> Vegetarian</input>
                                         </div>
 
                                         <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Vegan</input>
+                                            <input type="radio" id="userInput5" name="lifestyle" value="Vegan"> Vegan</input>
                                         </div>
 
                                         <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Pescatarian </input>
+                                            <input type="radio" id="userInput5" name="lifestyle" value="Pescatarian"> Pescatarian </input>
                                         </div>
 
                                         <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Not Following Diet </input>
+                                            <input type="radio" id="userInput5" name="lifestyle" value="No Diet"> Not Following Diet </input>
                                         </div>
                                         </fieldset>
+
                                   </div>
 
-                                  <button type="submit" class="btn submit-button">Save changes</button>
+                                  <button id="btn" type="submit" class="btn submit-button">Save changes</button>
                               </form>
   
                           </div>
