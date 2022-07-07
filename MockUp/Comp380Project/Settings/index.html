@@ -41,76 +41,108 @@
             <!-- Main Div for Both -->
               <div class="tab-content">
 
-                  <div id="account" data-tab-content role="tabpanel" class="active">
-                      <div class="card">
-                          <div class="card-header">
-                              <div class="card-actions float-right">
+                <div id="account" data-tab-content role="tabpanel" class="active">
+                  <div class="card">
+                      <div class="card-header">
+                          <div class="card-actions float-right">
+
+                          </div>
+                          <h5 class="card-title mb-0">Survey info</h5>
+                      </div>
+                      <div class="card-body">
+                          <form>
+
+                            <div class="form-group ">
+                                <label>How much do you weigh? (kg) </label>
+                                <br>
+                                <input type="number" id="userInput1">
+                            </div>
+
+                            <div class="form-group ">
+                              <label>How tall are you? (cm) </label>
+                              <br>
+                              <input type="number" id="userInput2" >
+                          </div>
+
+                          <!-- Sex/ Gender -->
+                          <hr class="border-light ">
+                              <div class="form-group">
+                                  <label >What is your gender? </label>
+                                  <br>
+                                  <input id="userInput3" name="gender" type="radio" value="male"> Male
+                                  <br>
+                                  <input id="userInput3" name="gender" type="radio" value="female"> Female
+                              </div>
+
+                              <!-- Age -->
+                          <hr class="border-light ">
+                          <div class="form-group">
+                              <label >What is your age? (ages 15-80)</label>
+                              <br>
+                              <input type="number" id="userInput4" >
+                          </div>
+
+                          <!-- Losing or Gaining Weight -->
+                          <hr class="border-light ">
+                              <div class="form-group">
+                                  <label >Are you planning to lose or gain weight?</label>
+                                  <br>
+                                  <input id="userInput5" name="diet" type="radio" value="Lose"> Lose
+                                  <br>
+                                  <input id="userInput5" name="diet" type="radio" value="Gain"> Gain
+                              </div>
+
+                              
+                              
+
+                              <!-- Activity Level -->
+                              <hr class="border-light ">
+                              <div class="form-group">
+                                <label >How would you describe your activity level?</label>
+                                <br>
+                                <input name="exercise" type="radio" id="userInput6" value="Sedentary (little to no exercise)"> Sedentary (little to no exercise)
+                                <br>
+                                <input name="exercise" type="radio" id="userInput6" value="Exercise 1-3 times/week"> Exercise 1-3 times/week
+                                <br>
+                                <input name="exercise" type="radio" id="userInput6" value="Exercise 4-5 times/week"> Exercise 4-5 times/week
+                                <br>
+                                <input name="exercise" type="radio" id="userInput6" value="Daily exercise or intense exercise 3-4 times/week"> Daily exercise or intense exercise 3-4 times/week
+                                <br>
+                                <input name="exercise" type="radio" id="userInput6" value="Intense exercise 6-7 times/week"> Intense exercise 6-7 times/week
+                                <br> 
+                                <input name="exercise" type="radio" id="userInput6" value="Very intense exercise daily">  Very intense exercise daily
+                            </div>
+
+                            <!-- Follow any lifestyles? -->
+                              <hr class="border-light ">
+                              <div class="form-group">
+                                  <label>Are you following any lifestyles? If so which ones </label>
+                                  <fieldset>
+                                    <div class="item">
+                                        <input type="radio" id="userInput7" name="lifestyle" value="Vegetarian"> Vegetarian</input>
+                                    </div>
+
+                                    <div class="item">
+                                        <input type="radio" id="userInput7" name="lifestyle" value="Vegan"> Vegan</input>
+                                    </div>
+
+                                    <div class="item">
+                                        <input type="radio" id="userInput7" name="lifestyle" value="Pescatarian"> Pescatarian </input>
+                                    </div>
+
+                                    <div class="item">
+                                        <input type="radio" id="userInput7" name="lifestyle" value="No Diet"> Not Following Diet </input>
+                                    </div>
+                                    </fieldset>
 
                               </div>
-                              <h5 class="card-title mb-0">Survey info</h5>
-                          </div>
-                          <div class="card-body">
-                              <form>
 
-                                  <div class="form-group">
-                                      <label >Are you planning to lose or gain weight?</label>
-                                      <br>
-                                      <input id="noDiet" name="diet" type="radio"> Lose
-                                      <br>
-                                      <input id="noDiet" name="diet" type="radio"> Gain
-                                  </div>
+                              <button id="btn" type="submit" class="btn submit-button">Save changes</button>
+                          </form>
 
-                                  <div class="form-group">
-                                    <label >Do you exercise?</label>
-                                    <br>
-                                    <input name="exercise" type="radio"> Lose
-                                    <br>
-                                    <input name="exercise" type="radio"> Gain
-                                </div>
-
-                                  <div class="form-group">
-                                      <label>Are you following any diets? If so which ones </label>
-                                      <fieldset>
-                                        <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> High Protein Diet</input>
-                                        </div>
-
-                                        <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Low Carb (Keto)</input>
-                                        </div>
-
-                                        <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Vegan Diet </input>
-                                        </div>
-
-                                        <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Vegetarian Diet </input>
-                                        </div>
-
-                                        <div class="item">
-                                            <input type="Checkbox" id="provideDiet" name="diet"> Not Following Diet </input>
-                                        </div>
-                                        </fieldset>
-                                  </div>
-
-                                  
-                                      <div class="form-group col-md-6">
-                                          <label>How much do you weigh? (kg) </label>
-                                          <input type="number" >
-                                      </div>
-
-                                      <div class="form-group col-md-6">
-                                        <label>How tall are you? (cm) </label>
-                                        <input type="number" >
-                                    </div>
-                                      
-                                  
-                                  <button type="submit" class="btn submit-button">Save changes</button>
-                              </form>
-  
-                          </div>
                       </div>
-                </div> 
+                  </div>
+            </div>
 
                     <!-- Notifs -->
                     <form>
