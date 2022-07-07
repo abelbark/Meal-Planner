@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+<body>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <div class="container p-0">
+      <h1 class="h3 mb-3">Settings</h1>
+      <div class="row">
+          <div class="col-md-5 col-xl-4">
+  
+              <div class="card">
+                  <div class="card-header">
+                      <h5 class="card-title mb-0"> Settings</h5>
+                  </div>
+  
+                <!-- Main Buttons for Tabs -->
+                  <div class="list-group list-group-flush tabs" role="tablist">
+                      <a class="list-group-item list-group-item-action active tab" data-toggle="list" href="#account" role="tab" data-tab-target="#account">
+                        Survey
+                      </a>
+                      
+                      <a class="list-group-item list-group-item-action tab" href="#account-notifications" data-tab-target="#account-notifications">
+                        Notifications
+                      </a>
+                      
+                  </div>
+                  
+              </div>
+          </div>
+  
+          <div class="col-md-7 col-xl-8">
+            <!-- Main Div for Both -->
+              <div class="tab-content">
+
+                  <div id="account" data-tab-content role="tabpanel" class="active">
+                      <div class="card">
+                          <div class="card-header">
+                              <div class="card-actions float-right">
+
+                              </div>
+                              <h5 class="card-title mb-0">Survey info</h5>
+                          </div>
+                          <div class="card-body">
+                              <form>
+
+                                  <div class="form-group">
+                                      <label >Are you planning to lose or gain weight?</label>
+                                      <br>
+                                      <input id="noDiet" name="diet" type="radio"> Lose
+                                      <br>
+                                      <input id="noDiet" name="diet" type="radio"> Gain
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label >Do you exercise?</label>
+                                    <br>
+                                    <input name="exercise" type="radio"> Lose
+                                    <br>
+                                    <input name="exercise" type="radio"> Gain
+                                </div>
+
+                                  <div class="form-group">
+                                      <label>Are you following any diets? If so which ones </label>
+                                      <fieldset>
+                                        <div class="item">
+                                            <input type="Checkbox" id="provideDiet" name="diet"> High Protein Diet</input>
+                                        </div>
+
+                                        <div class="item">
+                                            <input type="Checkbox" id="provideDiet" name="diet"> Low Carb (Keto)</input>
+                                        </div>
+
+                                        <div class="item">
+                                            <input type="Checkbox" id="provideDiet" name="diet"> Vegan Diet </input>
+                                        </div>
+
+                                        <div class="item">
+                                            <input type="Checkbox" id="provideDiet" name="diet"> Vegetarian Diet </input>
+                                        </div>
+
+                                        <div class="item">
+                                            <input type="Checkbox" id="provideDiet" name="diet"> Not Following Diet </input>
+                                        </div>
+                                        </fieldset>
+                                  </div>
+
+                                  
+                                      <div class="form-group col-md-6">
+                                          <label>How much do you weigh? (kg) </label>
+                                          <input type="number" >
+                                      </div>
+
+                                      <div class="form-group col-md-6">
+                                        <label>How tall are you? (cm) </label>
+                                        <input type="number" >
+                                    </div>
+                                      
+                                  
+                                  <button type="submit" class="btn submit-button">Save changes</button>
+                              </form>
+  
+                          </div>
+                      </div>
+                </div> 
+
+                    <!-- Notifs -->
+                    <form>
+
+                    <div id="account-notifications" data-tab-content>
+                        <h6 class="mb-4">Notifications</h6>
+
+                    <hr class="border-light m-0">
+                    <div class="card-body pb-2">
+                        <div class="form-group">
+                        <label class="switcher">
+                          <input type="checkbox" class="switcher-input" >
+                          <span class="switcher-indicator">
+                            <span class="switcher-yes"></span>
+                            <span class="switcher-no"></span>
+                          </span>
+                          <span class="switcher-label">Notify me when I haven't opened the app in 24 hours</span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label class="switcher">
+                          <input type="checkbox" class="switcher-input" >
+                          <span class="switcher-indicator">
+                            <span class="switcher-yes"></span>
+                            <span class="switcher-no"></span>
+                          </span>
+                          <span class="switcher-label">Notify me when I haven't logged my meals for 24 hours</span>
+                        </label>
+                      </div>
+            
+                    </div>
+                    <hr class="border-light m-0">
+                    <br>
+                    <button type="submit" class="btn submit-button">Save changes</button>
+                </form>
+                    </div>
+                    
+          </div>
+      </div>
+  
+  </div>
+
+</body>
+</html>
 
