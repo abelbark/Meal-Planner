@@ -14,6 +14,10 @@
         users.push(user);
         document.forms[0].reset();
         console.warn('added', {users} );
+       
+        localStorage.setItem('HealthInfo', JSON.stringify(users) );
+        var retrievedObject = localStorage.getItem('HealthInfo');
+        console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
     }
 
