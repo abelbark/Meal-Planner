@@ -1,0 +1,15 @@
+.pagecontent{
+    padding: 24px;
+}
+
+.pagecontent {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h1 {
+    font-family: courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 2em;
+}
