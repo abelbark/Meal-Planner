@@ -17,19 +17,19 @@ const addUsers = (ev)=>{
 
     
     if(user.lifestyle == 'Vegetarian'){
-        alert('you chose Vegetarian');
+        alert('Check out our Vegetarian Meal Plan');
         return false;
     }
     else if(user.lifestyle == 'Vegan'){
-        confirm('you chose vegan');
+        alert('Check out our Vegan Meal Plan');
         return false;
     }
     else if(user.lifestyle == 'Pescatarian'){
-        confirm('you chose Pescatarian');
+        alert('Check out our Pescatarian Meal Plan');
         return false;
     }
     else if(user.lifestyle == 'Not Following Diet'){
-        confirm('Check out our Variety of Meals');
+        alert('Check out our Variety of Meals');
         return false;
     }
     else{
