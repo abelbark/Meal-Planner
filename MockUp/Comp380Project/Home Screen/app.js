@@ -27,10 +27,12 @@ var quotes = [
     '"I am the greatest. I said that even before I knew I was."',
     '"You got one life to live. So Im living it the way I want to live it" -Nayvadius Demun Wilburn',
     '“Don’t ask for a million dollars. Ask for the stuff that’ll get you a million dollars – your health, your brain, your sanity, wisdom."',
-    '',
+
 
 ];
-document.getElementById("title").innerHTML = quotes[n-1];
+document.getElementById("title").innerHTML = quotes[n];
+
+
 
 
 
