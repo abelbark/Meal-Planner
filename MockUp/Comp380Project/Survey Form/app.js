@@ -28,13 +28,11 @@ const addUsers = (ev)=>{
         alert('Check out our Pescatarian Meal Plan');
         return false;
     }
-    else if(user.lifestyle == 'Not Following Diet'){
+    else{
         alert('Check out our Variety of Meals');
         return false;
     }
-    else{
-        confirm('What?');
-    }
+    
 
 
     localStorage.setItem('HealthInfo', JSON.stringify(users) );
