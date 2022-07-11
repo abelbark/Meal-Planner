@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="styles.css">
 
 
+
 </head>
 <body>
 
@@ -33,7 +34,7 @@
 
         <div class="grid container">
 
-            <a href="../Calendar/index.html" class="link" >
+            <a href="https://demo.mobiscroll.com/fullscreen/timeline/meal-planner" class="link" >
             <div class="item">
                 <h4>Calendar</h4>
                 <p>Log your meals and calories to keep track throughout the day. </p>
@@ -104,6 +105,15 @@
         </ul>
     </footer>
 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Load our React component. -->
+    <script src="../Calendar/src/App.js"></script>
     <script src="app.js"></script>
+    <script>import React from 'react';
+        import ReactDOM from 'react-dom';
+        import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+        import {Homepage, Aboutpage } from './App';</script>
 </body>
 </html>
