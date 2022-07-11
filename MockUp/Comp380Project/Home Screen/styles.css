@@ -133,8 +133,8 @@ body{
   font-size: 22px;
 }
 
-.link {
-    text-decoration: none;
+a, a:hover, a:active, a:visited, a:focus {
+  text-decoration:none;
 }
 
 .item:hover{
